@@ -1,0 +1,15 @@
+img{
+    width: 5em;
+    height: 5em;
+}
+
+.product-div{
+    display: inline-block;
+    margin-right: 5em;
+}
+
+.current-bids{
+    width: 10em;
+    height: 15em;
+    border: black solid .2em;
+}

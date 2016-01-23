@@ -1,0 +1,28 @@
+<a href='#/'>Logout</a>
+<h3>Bid it up, <span ng-bind='bidsControl.user.name'></span></h3>
+
+<div class='product-div' ng-repeat='product in bidsControl.products'>
+    <h3 ng-bind='product.title'></h3>
+    <img src='{{product.url}}'><br><br>
+    <input type='text' ng-model='bidsControl.new_bid.amount'><br>
+    <button ng-click='bidsControl.createBid(product._id)'>Bid</button>
+</div>
+ <div class='current-bids'>
+    <h4 ng-bind='bidsControl.bids.product[0].bid[0]'></h4>
+    <h4 ng-bind='bidsControl.bids.product[0].bid[1]'></h4>
+    <h4 ng-bind='bidsControl.bids.product[0].bid[2]'></h4>
+</div>
+<input type='text' placeholder='Search' ng-model='bidsControl.search'>
+ <div class='current-bids'>
+    <h4 ng-bind='bidsControl.bids.product[1].bid[0]'></h4>
+    <h4 ng-bind='bidsControl.bids.product[1].bid[1]'></h4>
+    <h4 ng-bind='bidsControl.bids.product[1].bid[2]'></h4>
+</div>
+<input type='text' placeholder='Search' ng-model='bidsControl.search'>
+ <div class='current-bids'>
+    <h4 ng-bind='bidsControl.bids.product[2].bid[0]'></h4>
+    <h4 ng-bind='bidsControl.bids.product[2].bid[1]'></h4>
+    <h4 ng-bind='bidsControl.bids.product[2].bid[2]'></h4>
+</div>
+<input type='text' placeholder='Search' ng-model='bidsControl.search'>
+<button ng-click='bidsControl.endBid(bidsControl.user)'>End Bid</button>
